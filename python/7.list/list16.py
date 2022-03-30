@@ -6,4 +6,6 @@
 
 print("[1]", list(range(1,11)))
 print("[2]", [x**2 for x in range(1,11)])
-print("[3]", [x**2 for x in range(1,11) if x == 25])
+print("[3]", [x**2 for x in range(1,11) if x**2 != 5**2])
+print("[4]", [x for x in range(1,51) if x%2 != 0])
+print("[5]", [x for x in range(1,51) if x%2 == 0])
