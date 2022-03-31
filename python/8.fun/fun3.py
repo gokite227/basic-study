@@ -1,10 +1,9 @@
-#한 반의 학생들 10 명에 대한 영어 점수표가 리스트로 있다
-#최고 점수를 출력하는 함수 를 만들어 영어 점수표를 함수로 전달하면 최고 점수가 나오도록 구현 해보시오
+#아래와 같은 조건을 만족하는 3의 배수 판별 함수 is_divided_by_3를 완성하세요.
 
+def is_divided_by_3(num):
+    # 코드를 완셩하세요.
+    return (num % 3) == 0
 
-english_score= [ 35, 55, 87, 98, 48, 88, 77, 65, 91, 79]
+x=int(input())
 
-def max(list):
-    maxs = 0
-    for i in list:
-        if 
+print(is_divided_by_3(x))
