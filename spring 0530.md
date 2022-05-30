@@ -1,15 +1,15 @@
-pom.xml 필수 : common dbcp
+### -pom.xml 필수 : common dbcp
 
-데이터 소스 : JDBC템플릿을 사용할때 데이터베이스를 사용하기위한 ulr,password등 을 담고있는 것
+### -데이터 소스 : JDBC템플릿을 사용할때 데이터베이스를 사용하기위한 ulr,password등 을 담고있는 것
 
-jdbc 템플릿 사용 메소드:
-    update(): insert, update, delete
-    queryForInt() : 셀렉트로 검색된 개수 정수값
-    queryForObject(): 셀렉 구문의 실행  결과를 VO객체로 리턴, rowMapper 
-    query(): 셀렉트 실행 결과가 목록일때
+### -jdbc 템플릿 사용 메소드:
+   #### update(): insert, update, delete
+   #### queryForInt() : 셀렉트로 검색된 개수 정수값
+   #### queryForObject(): 셀렉 구문의 실행  결과를 VO객체로 리턴, rowMapper 
+   #### query(): 셀렉트 실행 결과가 목록일때
 
-rowMapper: 레코드를 주머니에 담아서 주는것(자동적으로 마지막 레코드까지 주머니에담아서 리턴해줌)
-    maprow(resultSet, int(레코드 값))
+### -rowMapper: 레코드를 주머니에 담아서 주는것(자동적으로 마지막 레코드까지 주머니에담아서 리턴해줌)
+   #### maprow(resultSet, int(레코드 값))
 
 <pre>
 <code>
@@ -37,10 +37,10 @@ rowMapper: 레코드를 주머니에 담아서 주는것(자동적으로 마지�
 </code>
 </pre>
 
--JDBC 템플릿 사용
-    jdbc util 클래스 없음
-    데이터 소스 설정(property):
-        <context: property> 사용해서 값을 외부 파일에서 받아옴
+### -JDBC 템플릿 사용
+    #### jdbc util 클래스 없음
+    #### 데이터 소스 설정(property):
+        #### <context: property> 사용해서 값을 외부 파일에서 받아옴
 <pre>
 <code>
         ex) jdbc.driver=com.mysql.cj.jdbc.Driver
