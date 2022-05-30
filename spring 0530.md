@@ -58,3 +58,16 @@
 	 ex)insert 실행할때 트랜젝션 필요 왜냐 삽입하다가 중간에 멈추면 롤백
 	    delete 실행 할때 트랜젝션 필요
 	    select 실행 할때 트랜젝션 필요없음
+
+
+### MVC
+
+<servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>com.springbook.view.controller.DispatcherServlet</servlet-class>
+  </servlet>
+  //서블릿 명칭 
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
