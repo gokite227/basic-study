@@ -3,13 +3,13 @@
 ### -데이터 소스 : JDBC템플릿을 사용할때 데이터베이스를 사용하기위한 ulr,password등 을 담고있는 것
 
 ### -jdbc 템플릿 사용 메소드:
-   #### update(): insert, update, delete
-   #### queryForInt() : 셀렉트로 검색된 개수 정수값
-   #### queryForObject(): 셀렉 구문의 실행  결과를 VO객체로 리턴, rowMapper 
-   #### query(): 셀렉트 실행 결과가 목록일때
+#### 	update(): insert, update, delete
+#### 	queryForInt() : 셀렉트로 검색된 개수 정수값
+#### 	queryForObject(): 셀렉 구문의 실행  결과를 VO객체로 리턴, rowMapper 
+#### 	query(): 셀렉트 실행 결과가 목록일때
 
 ### -rowMapper: 레코드를 주머니에 담아서 주는것(자동적으로 마지막 레코드까지 주머니에담아서 리턴해줌)
-   #### maprow(resultSet, int(레코드 값))
+#### 	maprow(resultSet, int(레코드 값))
 
 <pre>
 <code>
@@ -50,3 +50,10 @@
             jdbc.password=dongyan
 <code>
 </pre>
+
+
+
+### 트렌젝션 매니저
+####	<tx:advicd> 트랜잭션 매니저 사용 태그
+####	<메서드 이름을 모르는 경우엔 에스펙트 사용 못함, 어드바이저 태그 이용해야한다.>
+#### 	트랜잭션 매니저는 메서드 이름을 모르기 떄문에 어드바이저 태그 이용
