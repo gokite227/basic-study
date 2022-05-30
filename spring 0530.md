@@ -42,14 +42,12 @@
      데이터 소스 설정(property):
          <context: property> 사용해서 값을 외부 파일에서 받아옴
 	
-<pre>
-<code>
+
         ex) jdbc.driver=com.mysql.cj.jdbc.Driver
             jdbc.url=jdbc:mysql://localhost:3307/springdb?serverTimezone=UTC&useSSL=false&characterEncoding=utf-8
             jdbc.username=root
             jdbc.password=dongyan
-<code>
-</pre>
+
 
 
 
