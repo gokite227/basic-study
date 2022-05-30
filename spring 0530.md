@@ -60,20 +60,4 @@
 	    select 실행 할때 트랜젝션 필요없음
 
 
-### MVC
 
-<pre>
-<code>
-
-  //<servlet>
-    //<servlet-name>action</servlet-name>
-    //<servlet-class>com.springbook.view.controller.DispatcherServlet</servlet-class>
-  //</servlet>
-  //서블릿 명칭 
-  //<servlet-mapping>
-    //<servlet-name>action</servlet-name>
-    //<url-pattern>*.do</url-pattern>
-  //</servlet-mapping>
-
-</code>
-</pre>
