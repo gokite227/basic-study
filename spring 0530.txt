@@ -1,0 +1,17 @@
+mvc
+로그인 기능을 jsp로 만듬 x
+
+ <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>com.springbook.view.controller.DispatcherServlet</servlet-class>
+  </servlet>
+  //서블릿 명칭 바꿈
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+
+프로토콜 포함 문자열 url
+프로토콜 비포함 문자열 uri
+
