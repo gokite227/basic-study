@@ -62,6 +62,9 @@
 
 ### MVC
 
+<pre>
+<code>
+
 <servlet>
     <servlet-name>action</servlet-name>
     <servlet-class>com.springbook.view.controller.DispatcherServlet</servlet-class>
@@ -71,3 +74,6 @@
     <servlet-name>action</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+
+</code>
+</pre>
