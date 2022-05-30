@@ -38,9 +38,10 @@
 </pre>
 
 ### -JDBC 템플릿 사용
-    #### jdbc util 클래스 없음
-    #### 데이터 소스 설정(property):
-        #### <context: property> 사용해서 값을 외부 파일에서 받아옴
+     jdbc util 클래스 없음
+     데이터 소스 설정(property):
+         <context: property> 사용해서 값을 외부 파일에서 받아옴
+	
 <pre>
 <code>
         ex) jdbc.driver=com.mysql.cj.jdbc.Driver
