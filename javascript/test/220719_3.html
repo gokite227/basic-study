@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src = "2200718_1.js"></script> -->
+    <script>
+        'use strict';
+        let calculator = {
+            // ... 여기에 답안 작성 ...
+            sum() {
+                return this.a + this.b;
+            },
+
+            mul() {
+                return  this.a * this.b;
+            },
+            read (){
+                this.a = +prompt("1", 0);
+                this.b = +prompt("2", 0);
+            }
+
+        };
+
+        calculator.read();
+        alert( calculator.sum() );
+        alert( calculator.mul() );
+        
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
