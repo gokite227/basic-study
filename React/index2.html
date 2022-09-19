@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    function MinutesToHours () {
+        const [amount, setAmount] = React.useState();
+        const [flipped, setflipped] = React.useState(false);
+        const onChange = (event) => {
+            setAmount(event.target.value);
+        };
+        const reset = () => setAmount(0);
+        const onFlip = () => {
+            reset();
+            setflipped((crrent) => !crrent);
+        };
+        return(
+            <div>
+                <div>
+                <h1>Super Conveerter</h1>
+                <label htmlFor="minutes">Minutes</label>
+                <input 
+                    value={flipped ? amount * 60 : amount} 
+                    id= "minutes" 
+                    placeholder="Minutes"  
+                    type="number" 
+                    onChange={onChange} 
+                    disabled={flipped}/>
+                </div>
+                <div>
+                <label htmlFor="hours">Hours</label>
+                <input 
+                    value={flipped ? amount : Math.round(amount/60)} 
+                    id= "hours" 
+                    placeholder="Hours" 
+                    type="number" 
+                    disabled={!flipped}
+                    onChange={onChange}
+                    />
+                </div>
+                <button onClick={reset}>Reset</button>
+                <button onClick={onFlip}>Filp</button>
+            </div>
+        );
+    }
+    function KmToMiles() {
+        return(
+            <h3>KM To Miles</h3>
+        );
+    }
+    function App() {
+        const [index, setIndex] = React.useState(0);
+        const onSelect = (event) => {
+            setIndex(event.target.value);
+        }
+        return(
+        <div>
+            <h1>Super Conveerter</h1>
+            <select value={index} onChange={onSelect}>
+                <option value="0">Minutes & Hours</option>
+                <option value="1">Km & Miles</option>
+            </select>
+            {index === "0" ? <MinutesToHours /> : null}
+            {index === "" ? <KmToMiles/> : null}
+        </div>
+        );
+    }
+    ReactDOM.render(<App />, root);
+
+</script>
+
+</html>
