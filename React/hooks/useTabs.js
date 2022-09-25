@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-export const content = [
+ const content = [
   {
     tab: "Section 1",
     content: "I'm the content of the Section 1"
@@ -14,7 +14,7 @@ export const content = [
   }
 ];
 
-const useTabs = (initialTab, allTabs) => {
+export const useTabs = (initialTab, allTabs) => {
   if (!allTabs || !Array.isArray(allTabs)) {
     return;
   }
