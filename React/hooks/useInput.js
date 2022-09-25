@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-const useInput = (initalValue, validators) => {
+export const useInput = (initalValue, validators) => {
   const [value, setValue] = useState(initalValue);
   const onChange = (event) => {
     const {
