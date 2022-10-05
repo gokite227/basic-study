@@ -1,42 +1,87 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, Text, View, Image} from 'react-native';
 
+type Props = {};
+export default class App extends Component<Props> {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text></Text>
+          <Text></Text>
+          <Text></Text>
+          
+          <Text style={styles.Text}>   Login</Text>
+        </View>
+        <View>
+        <Image style={styles.img} source={require("./login.png")} />
+          <View style={styles.elem}>
+            
+          </View>
 
+          <View style={styles.elem}>
+            
+          </View>
 
-export default function App() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [newAccount, setNewAccount] = useState(true);
-  const [error ,seterror] = useState("");
-  
-  return (
-    <View style={styles.container}>
-      <Text>Hi</Text>
-      <StatusBar style="auto" />
-      <TextInput
-        value={email}
-        onChangeText={(email) => setEmail(email)}
-        returnKeyType="next"
-        onEndEditing={() => console.log("onEndEditing")}
-        onSubmitEditing={() => console.log("onSubmitEditing")}
-      />
-      <TextInput
-        value={password}
-        onChangeText={(password) => setPassword(password)}
-        returnKeyType="next"
-        onEndEditing={() => console.log("onEndEditing")}
-        onSubmitEditing={() => console.log("onSubmitEditing")}
-      />
-    </View>
-  );
+        </View>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor:'rgb(242, 240, 233)',
   },
+  header: {
+    height:100,
+    backgroundColor:'rgb(102, 124, 116)',
+  },
+  footer: {
+    height:60,
+    backgroundColor:'red',
+  },
+  content: {
+    height:100,
+    width: 50,
+    backgroundColor: 'rgb(237, 233, 222)',
+  },
+
+  elem: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderColor:'#eee',
+    borderBottomWidth:0.5,
+    padding: 5,
+  },
+  userInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  userComment: {
+    padding:8,
+    backgroundColor:'yellow',
+    borderRadius:5,
+  },
+  profile: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: 'yellow',
+  },
+  name: {
+    paddingLeft: 10,
+  },
+  Text: {
+    fontSize: 25,
+    flexDirection: 'row',
+    color: 'white'
+  },
+  img : {
+    width: 410,
+    height: 650,
+  }
 });
