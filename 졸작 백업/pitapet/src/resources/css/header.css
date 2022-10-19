@@ -1,0 +1,27 @@
+@charset "UTF-8";
+header {
+    height: 10%;
+    width:100%;
+    padding: 1rem;
+    color: black;
+    background: #ede9de;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  html,body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #ede9de;
+  }
+  .topC {
+    width: 100%;
+    height: 40%;
+    background: #d3cbb4;
+  }
+  .cat_main {
+    size: 60%;  }
+

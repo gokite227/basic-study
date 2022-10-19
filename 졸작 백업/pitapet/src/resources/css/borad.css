@@ -1,0 +1,35 @@
+
+    .main {
+      border: 1px solid red;
+    }
+
+    .grid {
+      
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 28px;
+      @media screen and (max-width: 718px) {
+        gap: 3px;
+      }
+    }
+
+    .CardContainer {
+      
+      width: 100%;
+      position: relative;
+      
+    }
+
+    .CardContainer::after {
+      display: block;
+      content: "";
+      padding-bottom: 100%;
+    }
+
+    .CardBox {
+      
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
